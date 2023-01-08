@@ -31,4 +31,4 @@ jobs:
 
     - name: Test with pytest
       run: |
-        python test_calulator.py
+        pytest test_calulator.py
