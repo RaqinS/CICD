@@ -32,4 +32,13 @@ jobs:
     - name: Test
       run: |
         pytest test_calculator.py
+    
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ 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 }}
+        BRANCH: gh-pages
+        FOLDER: dist
+    
         
