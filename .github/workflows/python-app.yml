@@ -31,4 +31,4 @@ jobs:
 
     - name: Test
       run: |
-        python calculator.py
+        test_python calculator.py
