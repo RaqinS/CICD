@@ -37,7 +37,7 @@ jobs:
       if: success()
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        ACCESS_TOKEN: ${{ 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 }}
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: dist
     
