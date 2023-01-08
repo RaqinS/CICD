@@ -36,11 +36,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pyinstaller
-        pyinstaller --onefile --add-data 'flask_app/templates:flask_app/templates' --add-data 'static:static' flask_app/calculator.py
+        pyinstaller --onefile flask_app/calculator.py
         mkdir -p dist
-        mv app.spec dist/
-        mv dist/app.spec dist/app
-        cp -r flask_app dist/
+        mv calculator.spec dist/
+        mv dist/calculator.spec dist/calculator
         
     
     - name: Deploy to GitHub Pages
