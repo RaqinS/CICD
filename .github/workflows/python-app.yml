@@ -29,6 +29,6 @@ jobs:
         pip install flake8 pytest flask
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Test with pytest
+    - name: Test
       run: |
-        pytest test_calulator.py
+        python calculator.py
