@@ -31,12 +31,12 @@ jobs:
 
     - name: Test
       run: |
-        pytest flask_app/test_calculator.py
+        pytest test_calculator.py
     - name: build app
       run: |
         python -m pip install --upgrade pip
         pip install pyinstaller
-        pyinstaller --onefile flask_app/calculator.py
+        pyinstaller --onefile calculator.py
         mkdir -p dist
         mv calculator.spec dist/
         mv dist/calculator.spec dist/calculator
