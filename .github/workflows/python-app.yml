@@ -46,7 +46,7 @@ jobs:
       if: success()
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        ACCESS_TOKEN: ${{ secrets.Github_pages }}
+        ACCESS_TOKEN: ${{ secrets.PAGES }}
         BRANCH: gh-pages
         FOLDER: dist
         
