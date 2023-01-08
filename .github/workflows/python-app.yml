@@ -31,7 +31,7 @@ jobs:
 
     - name: Test
       run: |
-        pytest test_calculator.py
+        pytest flask_app/test_calculator.py
     
     - name: Deploy to GitHub Pages
       if: success()
@@ -39,7 +39,7 @@ jobs:
       with:
         ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: cicd
+        FOLDER: flask_app
         
     
         
