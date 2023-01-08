@@ -40,8 +40,8 @@ jobs:
         mkdir -p dist
         mv app.spec dist/
         mv dist/app.spec dist/app
-        cp -r static dist/
-        cp -r templates dist/
+        cp -r flask_app dist/
+        
     
     - name: Deploy to GitHub Pages
       if: success()
