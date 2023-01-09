@@ -34,7 +34,12 @@ jobs:
         pytest test_calculator.py
     - name: build app
       run: |
-       python calculator.py sdist bdist_wheel
+        python -m pip install --upgrade pip
+        pip install pyinstaller
+        pyinstaller --onefile calculator.py
+        mkdir -p dist
+        mv calculator.spec dist/
+        mv dist/calculator.spec dist/calculator
         
     
     - name: Deploy to GitHub Pages
