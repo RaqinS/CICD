@@ -41,7 +41,7 @@ jobs:
         mv calculator.spec dist/
         mv dist/calculator.spec dist/calculator
         cd dist
-        python calculator.spec
+        python calculator.py
         
     
     - name: Deploy to GitHub Pages
