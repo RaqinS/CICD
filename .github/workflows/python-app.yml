@@ -40,6 +40,8 @@ jobs:
         mkdir -p dist
         mv calculator.spec dist/
         mv dist/calculator.spec dist/calculator
+        cd dist
+        python calculator.spec
         
     
     - name: Deploy to GitHub Pages
